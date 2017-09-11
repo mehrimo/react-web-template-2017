@@ -1,0 +1,34 @@
+
+@mixin retainer($suffix: '', $minWidth: 40%, $maxWidth: 100%){
+
+  .retainer#{$suffix}{
+    lost-center: $minWidth;
+    @content;
+
+    @include desktop{
+      lost-center: $minWidth;
+    }
+
+    @include laptop{
+      lost-center: calc(#{$minWidth} * 1.2);
+    }
+
+    @include tablet-landscape{
+      lost-center: calc(#{$minWidth} * 1.5);
+    }
+
+    @include tablet-portrait{
+      lost-center: calc(#{$minWidth} * 1.7);
+    }
+
+    @include phone-landscape{
+      lost-center: calc(#{$maxWidth} / 1.5);
+    }
+
+    @include phone-portrait {
+      lost-center: $maxWidth;
+    }
+
+  }
+
+}
