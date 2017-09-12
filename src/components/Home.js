@@ -14,9 +14,23 @@ const Home = () => (
 
       <br />
 
-      <div>test one</div>
-      <div>test two</div>
-      <div>test three</div>
+        <div className="grid-one">
+            <div className="grid-item">
+              <div className="nested-grid-item"></div>
+              <div className="nested-grid-item"></div>
+            </div>
+            <div className="grid-item"></div>
+            <div className="grid-item"></div>
+        </div>
+
+        <div className="grid-two">
+            <div className="grid-item">
+              <div className="nested-grid-item"></div>
+              <div className="nested-grid-item"></div>
+            </div>
+            <div className="grid-item"></div>
+            <div className="grid-item"></div>
+        </div>
     </header>
   </div>
 );

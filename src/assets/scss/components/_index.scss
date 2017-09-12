@@ -1,16 +1,42 @@
 
 @import 'retainer';
 
-@include retainer('-sm', 30%, 90%){
+@include retainer('-sm', 60%, 90%){
   border: 2px solid $app-orange;
   background-color: $background;
   text-align: center;
 }
 
+
 #home-container div {
-  lost-column: 1/3;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  // lost-column: 1/3;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
+  // border: 2px solid $app-orange;
+  // height: 100px;
+  // background-color: $app-blue-light;
+}
+
+.grid-one{
+  width: 100%
+}
+
+.grid-one div {
+  lost-column: 1/4 0;
+}
+
+.grid-one div:nth-child(2) {
+  lost-column: 1/2 0;
+}
+
+.grid-item {
+  background-color: $app-grey-dark;
   height: 100px;
-  background-color: $app-blue-light;
+  margin-bottom: 20px;
+}
+
+.nested-grid-item {
+  background-color: $app-orange;
+  height: 50px;
+  margin-top: 20px;
 }
